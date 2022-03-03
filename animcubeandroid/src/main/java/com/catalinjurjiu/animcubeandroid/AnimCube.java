@@ -149,10 +149,10 @@ public class AnimCube extends SurfaceView implements View.OnTouchListener {
     private final double[] eyeD = new double[3];
     private final Path path = new Path();
     private final Object animThreadLock = new Object(); // lock object for the animation thread
-    private final int[] cubeColors = new int[6];
     private final int[] dragLayers = new int[18]; // which layers belongs to dragCorners
     private final int[] dragModes = new int[18]; // which layer modes dragCorners
     private final Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private int[] cubeColors = new int[6];
     // background colors
     private int backgroundColor;
     private int backgroundColor2;
@@ -338,6 +338,12 @@ public class AnimCube extends SurfaceView implements View.OnTouchListener {
         CubeUtils.deepCopy2DArray(colorValues, cube);
         CubeUtils.deepCopy2DArray(colorValues, initialCube);
         notifyHandlerAnimationFinished();
+        repaint();
+    }
+
+    public void setCubeColors(int[] cubeColors) {
+        this.cubeColors = cubeColors;
+        notifyHandlerCubeModelUpdated();
         repaint();
     }
 

@@ -1,6 +1,7 @@
 package com.catalinjurjiu.demoanimcubeandroid;
 
 import android.app.Activity;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -22,6 +23,8 @@ public class MainActivity extends Activity implements AnimCube.OnCubeModelUpdate
         Log.d(TAG, "onCreate");
         setContentView(R.layout.activity_main);
         animCube = (AnimCube) findViewById(R.id.animcube);
+        int[] cubeColors = {Color.BLUE, Color.WHITE, Color.GREEN, Color.RED, Color.YELLOW, Color.MAGENTA};
+        animCube.setCubeColors(cubeColors);
         animCube.setOnCubeModelUpdatedListener(this);
         animCube.setOnAnimationFinishedListener(this);
     }
