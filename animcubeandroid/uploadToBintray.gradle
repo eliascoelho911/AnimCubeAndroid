@@ -8,9 +8,9 @@ publishing {
             artifact("$buildDir/outputs/aar/animcubeandroid-release.aar")
             artifact sourcesJar
             artifact javadocJar
-            groupId 'com.catalinjurjiu'
+            groupId 'com.github.eliascoelho911'
             artifactId 'animcube-android'
-            version '1.0.3'
+            version '1.0.0'
 
             //The publication doesn't know about our dependencies, so we have to manually add them to the pom
             pom.withXml {
@@ -35,17 +35,17 @@ bintray {
     key = properties.getProperty('bintrayApiKey')
     publications = ['Publication']
     pkg {
-        repo = 'cjurjiu-opensource'
+        repo = 'com.github.eliascoelho911'
         name = 'animcube-android'
         labels = ['android', 'rubik\'s cube', 'surface view', 'animcube']
         publicDownloadNumbers = true
         override = true
         version {
-            name = '1.0.3'
-            desc = 'AnimCube for Android v1.0.3'
+            name = '1.0.0'
+            desc = 'AnimCube for Android v1.0.0'
             released = new Date()
             licenses = ['Apache-2.0']
-            vcsUrl = 'https://github.com/cjurjiu/animcubeandroid.git'
+            vcsUrl = 'https://github.com/eliascoelho911/animcubeandroid.git'
         }
     }
 }

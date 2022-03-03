@@ -374,23 +374,23 @@ Binaries and dependency information for Maven, Ivy, Gradle and others can be fou
 Example for Gradle:
 
 ```groovy
-compile 'com.catalinjurjiu:animcube-android:1.0.3'
+compile 'com.github.eliascoelho911:animcube-android:1.0.0'
 ```
 
 and for Maven:
 
 ```xml
 <dependency>
-  <groupId>com.catalinjurjiu</groupId>
+  <groupId>com.github.eliascoelho911</groupId>
   <artifactId>animcube-android</artifactId>
-  <version>1.0.3</version>
+  <version>1.0.0</version>
   <type>pom</type>
 </dependency>
 ```
 and for Ivy:
 
 ```xml
-<dependency org='com.catalinjurjiu' name='animcube-android' rev='1.0.3'>
+<dependency org='com.github.eliascoelho911' name='animcube-android' rev='1.0.0'>
   <artifact name='animcube-android' ext='pom' ></artifact>
 </dependency>
 ```
